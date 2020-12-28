@@ -97,16 +97,6 @@ bool Analyzer::ParseCommandLineArguments(const int &argc, char *argv[])
                 else
                 {
                         string inputArg = argv[1];
-                        if (inputArg.find("swf")!=string::npos)
-                        {
-                                string errorMessage="License agreement for Macromedia Shockwave ";
-                                errorMessage+="Flash specification prevents reading of files with '.swf' on their file name. ";
-                                errorMessage+="Please change the file name so that it does not include any 'swf' on it and try again";
-        
-                                throw AnalyzerException(errorMessage,ERR_SWFISSUE,AN_EXCEPTION_ERROR);
-        
-                                return false;
-                        }
                         
                 ifstream inFile;
         
