@@ -1,7 +1,7 @@
 swf2svg
 =======
 
-This is the recovered code for the dead [swf2svg project](http://swf2svg.sourceforge.net/) by "Ali G". The code is no longer available on Sourceforge, however it was possible to [extract it](https://gist.github.com/Jonty/2376f46818462345fdc81e029b62ce57) from the [Doxygen documentation](http://swf2svg.sourceforge.net/azar/doc/index.html) that is still available.
+This is the recovered code for [swf2svg](http://swf2svg.sourceforge.net/) by "Ali G". The code is no longer available on Sourceforge, however it was possible to [extract it](https://gist.github.com/Jonty/2376f46818462345fdc81e029b62ce57) from the [Doxygen documentation](http://swf2svg.sourceforge.net/azar/doc/index.html) that is still available.
 
 This software will extract any vector graphics from a given Macromedia Flash SWF file and convert them into an SVG.
 
@@ -11,7 +11,9 @@ Building
 
 Usage
 -----
-`./swf2svg zombocom.swf output.svg`
+`./swf2svg zombocom.swf` will write `zombocom.svg` in the same path
+
+**Note:** For no obvious reason this crashes randomly, you may need to run it a few times
 
 Documentation
 -------------
@@ -39,5 +41,6 @@ Terminating ...
 
 Notes
 -----
-* Some SVG files mysteriously produce no output
-* I don't know why this is called Azarakhsh
+* Originally this [refused to load any files with "swf" in the name](https://github.com/Jonty/swf2svg/commit/f121206ca8eb0c8906f2e64b90dbd58c173556ca)
+* This code crashes 50% of the time for no obvious reason
+* I don't know why it is called Azarakhsh
